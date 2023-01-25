@@ -1,3 +1,4 @@
+/* eslint-disable */
 import '@babel/polyfill';
 import { displayMap } from './leaflet';
 import { login, logout } from './login';

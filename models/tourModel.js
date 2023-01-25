@@ -115,7 +115,6 @@ const tourSchema = new mongoose.Schema(
 
 tourSchema.index({
   // 1 ascending, -1 descending order
-  // price: 1,
   price: 1,
   ratingsAverage: -1,
 });
@@ -155,16 +154,8 @@ tourSchema.pre(/^find/, function (next) {
 });
 
 tourSchema.post(/^find/, (docs, next) => {
-  // console.log(`Query took ${Date.now() - this.start} ms.`);
   next();
 });
-
-// Aggregation middleware
-// tourSchema.pre('aggregate', function (next) {
-//   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
-//   // console.log(this.pipeline());
-//   next();
-// });
 
 const Tour = mongoose.model('Tour', tourSchema);
 

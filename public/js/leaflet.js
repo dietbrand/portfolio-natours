@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const displayMap = (locations) => {
   // Leaflet map setup
   const map = L.map('map').setView([31.111745, -118.113491], 5);
